@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>I saved</title>
+    <link rel="shortcut icon" href="https://cdn.glitch.com/15e09974-ca0b-420c-84c2-26cee02a7637%2Ffavicon.ico?v=1575023044545" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="chat.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div id='top-bar'>
+      <span>Hello <span id="my-name"><%= username %></span></span>
+        <a href="#" class="btn btn-info btn-lg" onclick='window.location.href="/logout"'>
+            <span class="glyphicon glyphicon-log-out"></span> Log out
+        </a>
+    </div>
+    <div id='room'>
+      <p>
+        Currently active room, click to join
+        <div id='room-list'>
+          
+        </div>
+      </p>
+    </div>
+    <div id='center-box'>
+        <form id='room-input'>
+            
+            <input type='text' placeholder="type room name" required>
+            <button class="btn btn-success">Join room</button>
+        </form>
+        
+        <div id='chat-box' class="chat-message clearfix">
+            <div class="chat-history">
+                <ul id='messages'>
+                </ul>
+            </div>
+            
+            <form id='chat-input'>
+                <input autocomplete="off" placeholder="type messages....">
+                <button class="btn btn-primary" >Send</button>
+            </form>
+        </div>
+    </div>
+    <div class='bg'>
+      
+  </div>
+</body>
+<script src='jquery-3.4.1.min.js'></script>
+<script src='socket.io.js'></script>
+<script src='chat.js'></script>
+
+</html>
